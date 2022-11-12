@@ -1,0 +1,23 @@
+def valida_questao (t1):
+    dict1 = {}
+    tam = len(dict1.keys())
+
+    for i in range(len(t1)):
+        if t1[i]['titulo'] not in t1 :
+            return {'titulo': 'nao_encontrado'}
+        if t1[i]['nivel']not in t1 :
+            return {'nivel': 'nao_encontrado'}
+        if t1[i]['opicoes'] not in t1:
+            return {'opicoes': 'nao_encontrado'}
+        if t1[i]['correta'] not in t1:
+            {'correta': 'nao_encontrado'}
+            if t1[i]['titulo'] in t1:
+                 if t1['titulo'][1]!= 'str' or t1[1] =='':
+                        return {'titulo': 'vazio'}
+            else:
+                if  t1['titulo'][1]  != 'facil'or t1['titulo'][1] == 'medio'  or t1['titulo'][1] ==  'dificil':
+                    return {'nivel': 'valor_errado'}
+
+
+        if tam < 4:
+            return {'outro': 'numero_chaves_invalido'}
